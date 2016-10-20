@@ -1,0 +1,92 @@
+{
+	"name": "gp",
+    "horizons": [1, 6, 12, 48, 96, 144, 288, 576],
+    "folds": "10_fold_random.fold",
+	"jobs": 
+    [
+    	{
+    		"name": "time",
+    		"output_feature": "WindSpd_{Avg}",
+    		"input_feature": null,
+    		"l": 1,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf"
+    	},
+        {
+            "name": "lag_1",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": "WindSpd_{Avg}",
+            "l": 1,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard"
+        },
+        {
+            "name": "lag_3",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": "WindSpd_{Avg}",
+            "l": 3,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard"
+        },
+        {
+            "name": "lag_5",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": "WindSpd_{Avg}",
+            "l": 5,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard"
+        },
+        {
+            "name": "lag_10",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": "WindSpd_{Avg}",
+            "l": 10,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard"
+        },
+        {
+            "name": "mlag_1",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": ["Tair_{Avg}", "RH_{Avg}", "e_{Avg}", "WindSpd_{Max}",
+                     "WindSpd_{Std}", "WindSpd_{Avg}", "WindDir_{Avg}",
+                     "WindDir_{Std}"],
+            "l": 1,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard",
+            "scale_x": true
+        },
+        {
+            "name": "mlag_3",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": ["Tair_{Avg}", "RH_{Avg}", "e_{Avg}", "WindSpd_{Max}",
+                     "WindSpd_{Std}", "WindSpd_{Avg}", "WindDir_{Avg}",
+                     "WindDir_{Std}"],
+            "l": 3,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard",
+            "scale_x": true
+        },
+        {
+            "name": "mlag_5",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": ["Tair_{Avg}", "RH_{Avg}", "e_{Avg}", "WindSpd_{Max}",
+                     "WindSpd_{Std}", "WindSpd_{Avg}", "WindDir_{Avg}",
+                     "WindDir_{Std}"],
+            "l": 5,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard",
+            "scale_x": true
+        },
+        {
+            "name": "mlag_10",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": ["Tair_{Avg}", "RH_{Avg}", "e_{Avg}", "WindSpd_{Max}",
+                     "WindSpd_{Std}", "WindSpd_{Avg}", "WindDir_{Avg}",
+                     "WindDir_{Std}"],
+            "l": 10,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard",
+            "scale_x": true
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+	"name": "runner2",
+    "horizons": [1, 6],
+	"jobs":
+    [
+    	{
+    		"name": "time",
+            "type": "time",
+            "predictor": "predictor_rbf"
+    	},
+        {
+            "name": "nar",
+            "type": "narx",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": null,
+            "l": 1,
+            "time_as_feature": false,
+            "predictor": "predictor_linreg"
+        }
+    ]
+}

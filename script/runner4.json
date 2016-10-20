@@ -1,0 +1,18 @@
+{
+	"name": "runner4",
+    "horizons": ["1:7"],
+    "folds": "single.fold",
+	"jobs":
+    [
+    	{
+    		"name": "lin",
+            "type": "narx",
+            "predictor": "predictor_linreg",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": null,
+            "l": 3,
+            "time_as_feature": false
+    	}
+
+    ]
+}

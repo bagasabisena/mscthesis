@@ -1,0 +1,40 @@
+{
+	"name": "gp1",
+    "horizons": [1, 3, 6, 12, 24, 48, 96, 144],
+    "folds": "10_fold_random.fold",
+	"jobs": 
+    [
+    	{
+    		"name": "time",
+    		"output_feature": "WindSpd_{Avg}",
+    		"input_feature": null,
+    		"l": 1,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf"
+    	},
+        {
+            "name": "lag_1",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": "WindSpd_{Avg}",
+            "l": 1,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard"
+        },
+        {
+            "name": "lag_3",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": "WindSpd_{Avg}",
+            "l": 3,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard"
+        },
+        {
+            "name": "lag_5",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": "WindSpd_{Avg}",
+            "l": 5,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard"
+        }
+    ]
+}

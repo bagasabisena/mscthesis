@@ -1,0 +1,43 @@
+{
+	"name": "test",
+    "horizons": ["1:2"],
+    "folds": "5_4.fold",
+	"jobs": 
+    [
+    	{
+    		"name": "time",
+    		"output_feature": "WindSpd_{Avg}",
+    		"input_feature": null,
+    		"l": 1,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf"
+    	},
+        {
+            "name": "lag_1",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": "WindSpd_{Avg}",
+            "l": 1,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard"
+        },
+        {
+            "name": "lag_3",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": "WindSpd_{Avg}",
+            "l": 3,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard"
+        },
+        {
+            "name": "mlag_1",
+            "output_feature": "WindSpd_{Avg}",
+            "input_feature": ["Tair_{Avg}", "RH_{Avg}", "e_{Avg}", "WindSpd_{Max}",
+                     "WindSpd_{Std}", "WindSpd_{Avg}", "WindDir_{Avg}",
+                     "WindDir_{Std}"],
+            "l": 1,
+            "time_as_feature": false,
+            "predictor": "predictor_rbf_ard",
+            "scale_x": true
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="workstation">
+    <serverData>
+      <paths name="workstation">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/thesis" local="$PROJECT_DIR$/thesis" web="/thesis" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/notebook" />
+            <excludedPath local="true" path="$PROJECT_DIR$/output" />
+            <excludedPath local="true" path="$PROJECT_DIR$/job" />
+            <excludedPath local="true" path="$PROJECT_DIR$/R" />
+            <excludedPath local="true" path="$PROJECT_DIR$/script" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="workstation-public">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/thesis" local="$PROJECT_DIR$/thesis" web="/thesis" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/notebook" />
+            <excludedPath local="true" path="$PROJECT_DIR$/output" />
+            <excludedPath local="true" path="$PROJECT_DIR$/job" />
+            <excludedPath local="true" path="$PROJECT_DIR$/R" />
+            <excludedPath local="true" path="$PROJECT_DIR$/script" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

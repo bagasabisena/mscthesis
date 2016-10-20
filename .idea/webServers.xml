@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="96a28a8f-b048-4d00-8546-b63ca5c5f94a" name="workstation" url="http://192.168.1.16">
+        <fileTransfer host="192.168.1.16" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/home/bagas/thesis" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="7407a7df-0904-4612-94c4-a917affeb328" name="workstation-public" url="http://bagas.dynu.com">
+        <fileTransfer host="bagas.dynu.com" port="22" rootFolder="/home/bagas/thesis" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
